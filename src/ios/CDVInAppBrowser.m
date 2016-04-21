@@ -525,7 +525,7 @@
     self.spinner.clearsContextBeforeDrawing = NO;
     self.spinner.clipsToBounds = NO;
     self.spinner.contentMode = UIViewContentModeScaleToFill;
-    self.spinner.frame = CGRectMake(self.view.frame.size.width / 2 - 10, self.view.frame.size.height/ 2 - 10, 20, 20);
+    self.spinner.frame = CGRectMake(roundf((screenRect.size.width - 50) * 0.5f),roundf((screenRect.size.height - 50) * 0.5f),50,50);
 
     self.spinner.hidden = NO;
     self.spinner.hidesWhenStopped = YES;
