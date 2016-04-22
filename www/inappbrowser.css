@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
  * distributed with this work for additional information
@@ -23,7 +23,7 @@
     outline: 0;
     font-size: 100%;
     vertical-align: baseline;
-    background: #90F;
+    background: 0 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -31,8 +31,8 @@
     height: 100%;
     z-index: 9999999;
     box-sizing: border-box;
-    border: 40px solid #33FF00;
-    border: 40px solid rgba(255,255,0,0.25);
+    border: 40px solid #bfbfbf;
+    border: 40px solid rgba(0, 0, 0, 0.25);
 }
 
 .inAppBrowserWrapFullscreen {
@@ -41,7 +41,7 @@
 
 .inappbrowser-app-bar {
     height: 70px;
-    background-color: #330099;
+    background-color: #404040;
     z-index: 9999999;
 }
 
@@ -50,7 +50,7 @@
     height: 60px;
     width: 155px;
     margin: 0 auto;
-    background-color: #66CC99;
+    background-color: #404040;
     z-index: 9999999;
 }
 
@@ -60,7 +60,7 @@
     margin-left: 20px;
     font-family: "Segoe UI Symbol";
     float: left;
-    color: red;
+    color: white;
     font-size: 12px;
     text-transform: lowercase;
     text-align: center;
@@ -68,7 +68,7 @@
 }
 
 .app-bar-action[disabled] {
-    color: pink;
+    color: gray;
     /*disable click*/
     pointer-events: none;
 }
