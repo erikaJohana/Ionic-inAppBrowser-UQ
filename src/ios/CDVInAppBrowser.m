@@ -553,9 +553,9 @@
     self.toolbar.clearsContextBeforeDrawing = NO;
     self.toolbar.clipsToBounds = NO;
     self.toolbar.contentMode = UIViewContentModeScaleToFill;
-    self.toolbar.hidden = NO;
+    self.toolbar.hidden = YES;
     self.toolbar.multipleTouchEnabled = NO;
-    self.toolbar.opaque = NO;
+    self.toolbar.opaque = YES;
     self.toolbar.userInteractionEnabled = YES;
 
     CGFloat labelInset = 5.0;
@@ -600,7 +600,7 @@
     self.backButton.enabled = YES;
     self.backButton.imageInsets = UIEdgeInsetsZero;
 
-    [self.toolbar setItems:@[self.closeButton, flexibleSpaceButton, self.backButton, fixedSpaceButton, self.forwardButton]];
+    [self.toolbar setItems:@[self.closeButton, flexibleSpaceButton]];
 
     self.view.backgroundColor = [UIColor grayColor];
     [self.view addSubview:self.toolbar];
