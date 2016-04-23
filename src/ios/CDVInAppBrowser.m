@@ -508,7 +508,7 @@
     [self.view sendSubviewToBack:self.webView];
 
     self.webView.delegate = _webViewDelegate;
-    self.webView.backgroundColor = [UIColor whiteColor];
+    self.webView.backgroundColor = [UIColor colorWithRed:0.32 green:0.60 blue:0.22 alpha:1.0];
 
     self.webView.clearsContextBeforeDrawing = YES;
     self.webView.clipsToBounds = YES;
@@ -549,7 +549,7 @@
     self.toolbar.alpha = 1.000;
     self.toolbar.autoresizesSubviews = YES;
     self.toolbar.autoresizingMask = toolbarIsAtBottom ? (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin) : UIViewAutoresizingFlexibleWidth;
-    self.toolbar.barStyle.tintColor = [UIColor colorWithRed:0.32 green:0.60 blue:0.22 alpha:1.0];
+    self.toolbar.barStyle = UIBarStyleBlackOpaque;
     self.toolbar.clearsContextBeforeDrawing = NO;
     self.toolbar.clipsToBounds = NO;
     self.toolbar.contentMode = UIViewContentModeScaleToFill;
@@ -566,7 +566,7 @@
     self.addressLabel.alpha = 1.000;
     self.addressLabel.autoresizesSubviews = YES;
     self.addressLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin;
-    self.addressLabel.backgroundColor = [UIColor clearColor];
+    self.addressLabel.backgroundColor = [UIColor colorWithRed:0.34 green:0.80 blue:0.20 alpha:1.0];
     self.addressLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
     self.addressLabel.clearsContextBeforeDrawing = YES;
     self.addressLabel.clipsToBounds = YES;
@@ -620,7 +620,7 @@
     self.closeButton = nil;
     self.closeButton = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStyleBordered target:self action:@selector(close)];
     self.closeButton.enabled = YES;
-    self.closeButton.tintColor = [UIColor colorWithRed:0.32 green:0.60 blue:0.22 alpha:1.0];
+    self.closeButton.tintColor = [UIColor colorWithRed:60.0 / 255.0 green:136.0 / 255.0 blue:230.0 / 255.0 alpha:1];
 
     NSMutableArray* items = [self.toolbar.items mutableCopy];
     [items replaceObjectAtIndex:0 withObject:self.closeButton];
