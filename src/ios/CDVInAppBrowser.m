@@ -549,7 +549,7 @@
     self.toolbar.alpha = 1.000;
     self.toolbar.autoresizesSubviews = YES;
     self.toolbar.autoresizingMask = toolbarIsAtBottom ? (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin) : UIViewAutoresizingFlexibleWidth;
-    self.toolbar.barStyle = UIBarStyleBlackOpaque;
+    self.toolbar.barStyle.tintColor = [UIColor colorWithRed:0.32 green:0.60 blue:0.22 alpha:1.0];
     self.toolbar.clearsContextBeforeDrawing = NO;
     self.toolbar.clipsToBounds = NO;
     self.toolbar.contentMode = UIViewContentModeScaleToFill;
@@ -602,7 +602,7 @@
 
     [self.toolbar setItems:@[self.closeButton, flexibleSpaceButton, self.backButton, fixedSpaceButton, self.forwardButton]];
 
-    self.view.backgroundColor = [UIColor greenColor];
+    self.view.backgroundColor = [UIColor colorWithRed:0.32 green:0.60 blue:0.22 alpha:1.0];
     [self.view addSubview:self.toolbar];
     [self.view addSubview:self.addressLabel];
     [self.view addSubview:self.spinner];
