@@ -508,7 +508,7 @@
     [self.view sendSubviewToBack:self.webView];
 
     self.webView.delegate = _webViewDelegate;
-    self.webView.backgroundColor = [UIColor colorWithRed:0.32 green:0.60 blue:0.22 alpha:1.0];
+    self.webView.backgroundColor = [UIColor colorWithRed:0.15 green:0.66 blue:0.28 alpha:1.0];
 
     self.webView.clearsContextBeforeDrawing = YES;
     self.webView.clipsToBounds = YES;
@@ -566,7 +566,7 @@
     self.addressLabel.alpha = 1.000;
     self.addressLabel.autoresizesSubviews = YES;
     self.addressLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin;
-    self.addressLabel.backgroundColor = [UIColor colorWithRed:0.34 green:0.80 blue:0.20 alpha:1.0];
+    self.addressLabel.backgroundColor = [UIColor colorWithRed:0.15 green:0.66 blue:0.28 alpha:1.0];
     self.addressLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
     self.addressLabel.clearsContextBeforeDrawing = YES;
     self.addressLabel.clipsToBounds = YES;
@@ -602,7 +602,7 @@
 
     [self.toolbar setItems:@[self.closeButton, flexibleSpaceButton, self.backButton, fixedSpaceButton, self.forwardButton]];
 
-    self.view.backgroundColor = [UIColor colorWithRed:0.32 green:0.60 blue:0.22 alpha:1.0];
+    self.view.backgroundColor = [UIColor colorWithRed:0.15 green:0.66 blue:0.28 alpha:1.0];
     [self.view addSubview:self.toolbar];
     [self.view addSubview:self.addressLabel];
     [self.view addSubview:self.spinner];
