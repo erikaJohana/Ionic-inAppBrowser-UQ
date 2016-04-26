@@ -508,7 +508,7 @@
     [self.view sendSubviewToBack:self.webView];
 
     self.webView.delegate = _webViewDelegate;
-    self.webView.backgroundColor = [UIColor colorWithRed:0.15 green:0.66 blue:0.28 alpha:1.0];
+    self.webView.backgroundColor = [UIColor whiteColor];
 
     self.webView.clearsContextBeforeDrawing = YES;
     self.webView.clipsToBounds = YES;
@@ -590,19 +590,19 @@
     self.addressLabel.textColor = [UIColor colorWithWhite:1.000 alpha:1.000];
     self.addressLabel.userInteractionEnabled = NO;
 
-    NSString* frontArrowString = NSLocalizedString(@"->", nil); // create arrow from Unicode char
+    NSString* frontArrowString = NSLocalizedString(@"►", nil); // create arrow from Unicode char
     self.forwardButton = [[UIBarButtonItem alloc] initWithTitle:frontArrowString style:UIBarButtonItemStylePlain target:self action:@selector(goForward:)];
     self.forwardButton.enabled = YES;
     self.forwardButton.imageInsets = UIEdgeInsetsZero;
 
-    NSString* backArrowString = NSLocalizedString(@"<-", nil); // create arrow from Unicode char
+    NSString* backArrowString = NSLocalizedString(@"◄", nil); // create arrow from Unicode char
     self.backButton = [[UIBarButtonItem alloc] initWithTitle:backArrowString style:UIBarButtonItemStylePlain target:self action:@selector(goBack:)];
     self.backButton.enabled = YES;
     self.backButton.imageInsets = UIEdgeInsetsZero;
 
     [self.toolbar setItems:@[self.closeButton, flexibleSpaceButton, self.backButton, fixedSpaceButton, self.forwardButton]];
 
-    self.view.backgroundColor = [UIColor colorWithRed:0.15 green:0.66 blue:0.28 alpha:1.0];
+    self.view.backgroundColor = [UIColor grayColor];
     [self.view addSubview:self.toolbar];
     [self.view addSubview:self.addressLabel];
     [self.view addSubview:self.spinner];
@@ -617,13 +617,10 @@
 {
     // the advantage of using UIBarButtonSystemItemDone is the system will localize it for you automatically
     // but, if you want to set this yourself, knock yourself out (we can't set the title for a system Done button, so we have to create a new one)
-    //hola1
-     NSString* closeArrowString = NSLocalizedString(@"Cerrar", nil); // create arrow from Unicode char
-    self.closeButton = [[UIBarButtonItem alloc] initWithTitle:closeArrowString style:UIBarButtonItemStyleBordered target:self action:@selector(close)];
+    NSString* atras = NSLocalizedString(@"Cerrar", nil); // create arrow from Unicode char
+    self.closeButton = [[UIBarButtonItem alloc] initWithTitle:atras style:UIBarButtonItemStyleBordered target:self action:@selector(close)];
     self.closeButton.enabled = YES;
-    self.backButton.imageInsets = UIEdgeInsetsZero;
-
-    self.closeButton.tintColor = [UIColor colorWithRed:1.00 green:1.00 blue:1.00 alpha:1.0];
+    self.closeButton.imageInsets = UIEdgeInsetsZero;
 
     NSMutableArray* items = [self.toolbar.items mutableCopy];
     [items replaceObjectAtIndex:0 withObject:self.closeButton];
@@ -870,8 +867,6 @@
     self.addressLabel.text = [self.currentURL absoluteString];
     self.backButton.enabled = theWebView.canGoBack;
     self.forwardButton.enabled = theWebView.canGoForward;
-     self.backButton.tintColor = [UIColor colorWithRed:1.00 green:1.00 blue:1.00 alpha:1.0];
-    self.forwardButton.tintColor = [UIColor colorWithRed:1.00 green:1.00 blue:1.00 alpha:1.0];
 
     [self.spinner stopAnimating];
 
@@ -901,9 +896,6 @@
 
     self.backButton.enabled = theWebView.canGoBack;
     self.forwardButton.enabled = theWebView.canGoForward;
-    self.backButton.tintColor = [UIColor colorWithRed:1.00 green:1.00 blue:1.00 alpha:1.0];
-    self.forwardButton.tintColor = [UIColor colorWithRed:1.00 green:1.00 blue:1.00 alpha:1.0];
-
     [self.spinner stopAnimating];
 
     self.addressLabel.text = NSLocalizedString(@"Load Error", nil);
