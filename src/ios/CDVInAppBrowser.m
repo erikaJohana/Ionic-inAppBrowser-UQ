@@ -941,7 +941,7 @@
         // default values
         self.location = YES;
         self.toolbar = YES;
-        self.closebuttoncaption = nil;
+        self.closebuttoncaption = @"Cerrar";
         self.toolbarposition = kInAppBrowserToolbarBarPositionBottom;
         self.clearcache = NO;
         self.clearsessioncache = NO;
