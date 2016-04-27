@@ -594,6 +594,8 @@
     self.forwardButton = [[UIBarButtonItem alloc] initWithTitle:frontArrowString style:UIBarButtonItemStylePlain target:self action:@selector(goForward:)];
     self.forwardButton.enabled = YES;
     self.forwardButton.imageInsets = UIEdgeInsetsZero;
+    self.forwardButton.tintColor = [UIColor whiteColor];
+
 
 
     NSString* backArrowString = NSLocalizedString(@"◄", nil); // create arrow from Unicode char
@@ -622,6 +624,8 @@
     self.closeButton = [[UIBarButtonItem alloc] initWithTitle:atras style:UIBarButtonItemStyleBordered target:self action:@selector(close)];
     self.closeButton.enabled = YES;
     self.closeButton.imageInsets = UIEdgeInsetsZero;
+    self.closeButton.tintColor = [UIColor whiteColor];
+
  
     NSMutableArray* items = [self.toolbar.items mutableCopy];
     [items replaceObjectAtIndex:0 withObject:self.closeButton];
